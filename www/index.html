@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dialog Crash Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+   
+   
+    <!-- start jquery mobile -->
+    <link rel="stylesheet" href="lib/jquery.mobile-1.3.2.min.css" />
+    <link rel="stylesheet" href="lib/jquery.mobile.structure-1.3.2.min.css" />
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script src="lib/jquery.mobile-1.3.2.min.js"></script>
+
+
+    <!-- start phonegap -->
+    <script src="phonegap.js"></script>
+    <!-- end phonegap -->
+    
+   
+</head>
+
+<body>
+
+
+    <!-- Login Screen -->
+    <div data-role="page" id="login">
+        <div data-theme="a" data-role="header">
+            
+            <h3>
+            Dialog Crash Test
+        </h3>
+            
+        </div>
+        <div data-role="content">
+                            <div data-role="fieldcontain">
+                    <label data-i18n="label.icon" for="iconImage">
+                        Icon:
+                    </label>
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>
+                            &nbsp;
+                        </legend>
+                        <img id="iconImage" height="32" width="32" alt="" />
+                        <a href="#promptIcon" data-rel="dialog" data-role="button" data-i18n="nav.chooseIcon" data-i18n-target=".ui-btn-text" id="buttonChooseIcon">
+                Choose Icon
+            </a>
+                    </fieldset>
+                </div>
+
+        </div>
+    </div>
+
+
+    <!-- Icon -->
+    <div data-role="dialog" id="promptIcon">
+        <div data-role="header">
+            <h3 id="promptIconHeader" data-i18n="page.chooseIcon">Choose an Icon</h3>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <ul data-role="listview" class="icon-list" id="icon-list" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">Icons</li>
+                    <li id="ICON_2checkout.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_2checkout.png' />
+                            <h3>2 Checkout</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_amazon.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_amazon.png' />
+                            <h3>Amazon</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_amex.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_amex.png' />
+                            <h3>Amex</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_aol.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_aol.png' />
+                            <h3>AOL</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_apple.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_apple.png' />
+                            <h3>Apple</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_appstore.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_appstore.png' />
+                            <h3>Appstore</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_bankofamerican.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_bankofamerica.png' />
+                            <h3>Bank</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_bing.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_bing.png' />
+                            <h3>Bing</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_blogger.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_blogger.png' />
+                            <h3>Blogger</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_blogmark.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_blogmark.png' />
+                            <h3>Blogmark</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_cash.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_cash.png' />
+                            <h3 data-i18n="icon.cash">Cash</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_cirrus.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_cirrus.png' />
+                            <h3>Cirrus</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_citibank.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_citibank.png' />
+                            <h3>Citibank</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_colorblack.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_colorblack.png' />
+                            <h3 data-i18n="icon.colorBlack">Color Black</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_colorblue.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_colorblue.png' />
+                            <h3 data-i18n="icon.colorBlue">Color Blue</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_colordarkgreen.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_colordarkgreen.png' />
+                            <h3 data-i18n="icon.colorDarkGreen">Color Dark Green</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_colorgreen.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_colorgreen.png' />
+                            <h3 data-i18n="icon.colorGreen">Color Green</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_colororange.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_colororange.png' />
+                            <h3 data-i18n="icon.colorOrange">Color Orange</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_colorred.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_colorred.png' />
+                            <h3 data-i18n="icon.colorRed">Color Red</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_colorwhite.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_colorwhite.png' />
+                            <h3 data-i18n="icon.colorWhite">Color White</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_coloryellow.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_coloryellow.png' />
+                            <h3 data-i18n="icon.colorYellow">Color Yellow</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_creditcard1.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_creditcard1.png' />
+                            <h3 data-i18n="icon.creditCard1">Credit Card 1</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_creditcard2.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_creditcard2.png' />
+                            <h3 data-i18n="icon.creditCard2">Credit Card 2</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_creditcards.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_creditcards.png' />
+                            <h3 data-i18n="icon.creditCard3">Credit Card 3</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_delicious.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_delicious.png' />
+                            <h3>Delicious</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_designbump.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_designbump.png' />
+                            <h3>Design Bump</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_designfloat.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_designfloat.png' />
+                            <h3>Design Float</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_deviantart.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_deviantart.png' />
+                            <h3>Deviant Art</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_digg.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_digg.png' />
+                            <h3>Digg</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_dinersclub.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_dinersclub.png' />
+                            <h3>DinersClub</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_discover.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_discover.png' />
+                            <h3>Discover</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_echeck.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_echeck.png' />
+                            <h3>eCheck</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_email.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_email.png' />
+                            <h3 data-i18n="icon.email">Email</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_euro.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_euro.png' />
+                            <h3>Euro</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_facebook.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_facebook.png' />
+                            <h3>Facebook</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_feedburner.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_feedburner.png' />
+                            <h3>Feedburner</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_flickr.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_flickr.png' />
+                            <h3>Flickr</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_friendfeed.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_friendfeed.png' />
+                            <h3>Friend Feed</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_furl.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_furl.png' />
+                            <h3>Furl</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_google.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_google.png' />
+                            <h3>Google 1</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_google1.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_google1.png' />
+                            <h3>Google 2</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_googlecheckout.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_googlecheckout.png' />
+                            <h3>Google Checkout</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_googletalk.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_googletalk.png' />
+                            <h3>Google Talk</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_heart.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_heart.png' />
+                            <h3 data-i18n="icon.heart">Heart</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_jcb.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_jcb.png' />
+                            <h3>JCB</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_linkedin.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_linkedin.png' />
+                            <h3>LinkedIn</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_mastercard.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_mastercard.png' />
+                            <h3>MasterCard</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_mixx.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_mixx.png' />
+                            <h3>Mixx</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_money.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_money.png' />
+                            <h3 data-i18n="icon.money">Money</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_msn.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_msn.png' />
+                            <h3>MSN</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_music.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_music.png' />
+                            <h3 data-i18n="icon.music">Music</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_myspace.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_myspace.png' />
+                            <h3>MySpace</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_newsvine.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_newsvine.png' />
+                            <h3>NewsVine</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_paypal.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_paypal.png' />
+                            <h3>PayPal</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_peso_32.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_peso_32.png' />
+                            <h3 data-i18n="icon.peso">Peso</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_picasa.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_picasa.png' />
+                            <h3>Picasa</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_pound.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_pound.png' />
+                            <h3>Pound</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_reddit.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_reddit.png' />
+                            <h3>Reddit</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_rss.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_rss.png' />
+                            <h3>RSS</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_sharethis.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_sharethis.png' />
+                            <h3>ShareThis</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_skype.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_skype.png' />
+                            <h3>Skype</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_slashdot.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_slashdot.png' />
+                            <h3>Slashdot</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_slideshare.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_slideshare.png' />
+                            <h3>SlideShare</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_star.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_star.png' />
+                            <h3 data-i18n="icon.star">Star</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_stumbleupon.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_stumbleupon.png' />
+                            <h3>StumbleUpon</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_technorati.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_technorati.png' />
+                            <h3>Technorati</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_tumblr.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_tumblr.png' />
+                            <h3>Tumblr</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_twitter.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_twitter.png' />
+                            <h3>Twitter</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_visa.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_visa.png' />
+                            <h3>Visa</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_westernunion.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_westernunion.png' />
+                            <h3>Western Union</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_windows.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_windows.png' />
+                            <h3>Windows</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_wordpress.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_wordpress.png' />
+                            <h3>WordPress</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_yahoo.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_yahoo.png' />
+                            <h3>Yahoo</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_yen.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_yen.png' />
+                            <h3 data-i18n="icon.yen">Yen</h3>
+                        </a>
+                    </li>
+                    <li id="ICON_youtube.png">
+                        <a href="#">
+                            <img src='img/icons/ICON_youtube.png' />
+                            <h3>YouTube</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="fieldcontain">
+                <a data-role="button" data-i18n="global.navCancel" data-i18n-target=".ui-btn-text" data-theme="a" data-rel="back" data-icon="delete">
+                Cancel
+            </a> 
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
